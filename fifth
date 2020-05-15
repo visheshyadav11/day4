@@ -1,0 +1,33 @@
+ar=[]
+print("enter 00 in choice box to exit voting")
+n=int(input("enter the number of candidates="))
+m=int(input("enter the number of expected voters="))
+for i in range(n):
+    can=input("enter the "+ str(i+1) +" candidate names=")
+    ar.append(can)
+for j in range(n):
+    print("press "+str(j+1)+" for candidate   "+ar[j])  
+ar1=[]
+for i in range(m):
+    vote=int(input("enter the choice="))
+    if(vote<=n):
+        ar1.append(vote)
+    else:
+        print("wrong choice")
+    if(vote==00):
+        break
+print(ar1)
+ar2=[]
+for i in range(n):
+    print(str(ar[i])+" has got votes= "+str(ar1.count(i+1)))
+    x=ar1.count(i+1)
+    ar2.append(x)
+print(ar2)
+
+y=ar2.index(max(ar2))
+print(str(ar[y])+" has maximum no of votes")
+    
+        
+        
+    
+    
