@@ -1,0 +1,16 @@
+list_size=int(input("enter the size of list="))
+tuple_size=int(input("enter the size of tuple="))
+list1=[]
+for i in range(list_size):
+    print("enter the elements of tuple ",i+1)
+    tup=[]
+    for j in range(tuple_size):
+        tup.append(int(input("enter the element"+str(j+1)+"=")))
+    list1.append(tuple(tup))
+N=int(input("enter the index about which list to br sorted="))
+x=list1[N:]
+x.sort()
+print(x)
+        
+        
+        
