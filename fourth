@@ -1,0 +1,11 @@
+n=int(input("enter the size of dictionary="))
+Dict=dict()
+for i in range(n):
+    key=input("enter the keys of dictionary"+str(i+1)+"=")
+    value=input("enter the values of dictionary"+str(i+1)+"=")
+Dict[key]=value
+final = dict()
+for key,value in Dict.items():
+    if value not in final.values():
+        final[key] = value
+print("Dictonary after removing duplicate values: ", final)
